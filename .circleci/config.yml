@@ -39,6 +39,8 @@ jobs:
    
    - run: bundle exec rake db:create
    - run: bundle exec rake db:schema:load
+
+   - run: bundle install
    
    - run:
        name: Run rspec
