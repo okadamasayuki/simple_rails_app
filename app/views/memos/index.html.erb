@@ -1,0 +1,15 @@
+<h2>トップページ</h2>
+
+<a href="/new">新規メモ作成</a>
+
+<h3>メモ一覧</h3>
+
+<% @memos.each do |memo| %>
+    <p><%= memo.title %><%= memo.body %></p>
+    <a href="/delete/<%= memo.id %>" data-method="delete">このメモを削除</a>
+    <a href="/change/<%= memo.id %>">このメモを変更</a>
+<% end %>
+
+
+<h3>カテゴリー一覧</h3>
+
